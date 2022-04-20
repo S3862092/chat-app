@@ -21,7 +21,7 @@ const App = () => {
     setIsConnected(false);
     setChatRows([]);
   }, []);
-
+  
   const onSocketMessage = useCallback((dataStr) => {
     const data = JSON.parse(dataStr);
     if (data.members) {
