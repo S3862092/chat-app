@@ -22,7 +22,7 @@ const App = () => {
     setChatRows([]);
   }, []);
   
-  const onSocketMessage = useCallback((dataStr) => {
+  const onSocketMessage = useCallback((dataStr: any) => {
     const data = JSON.parse(dataStr);
     if (data.members) {
       setMembers(data.members);
